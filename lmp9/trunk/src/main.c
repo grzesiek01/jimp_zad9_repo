@@ -20,7 +20,9 @@ int main(int argc, char ** argv) {
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
-		printToScreen(x);
+		if(res == 0){
+			printToScreen(x);
+		}
 		freeMatrix(x);
 	}
 	else {
