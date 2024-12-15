@@ -68,9 +68,9 @@ double detm(Matrix *mat){
 }
 
 int eliminate(Matrix *mat, Matrix *b){
-	//if(detm(mat) == 0){
-	//	return 1;
-	//}
+	if(detm(mat) == 0){
+		return 1;
+	}
 	double wsp = 0; 
 	double flag = 0;
 	for (int i=0; i<mat->r-1; i++){
